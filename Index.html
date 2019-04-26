@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/js/stylesheet.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <div id="app">
+
+
+    <img v-if="!activeImg" width=300px src="https://www.gourmand-croquant.com/296/baba-rhum-lignac.jpg">
+    <label>cacher image</label>
+    <input type="checkbox" v-model="activeImg">
+
+    <h1 :class="{ red: active }">{{message}}</h1>
+    <input type="text" v-model="message" placeholder="Titre">
+
+
+    <h2 :class="{ red: active }">{{titreNew}}</h2>
+    <input type="text" v-model="titre" placeholder="Titre">
+
+    <button class="button btn-primary" @click="titreNew=titre">Modifier</button>
+    <label>mettre en rouge titres</label>
+    <input type="checkbox" v-model="active">
+    <br>
+
+
+  </div>
+
+
+
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
